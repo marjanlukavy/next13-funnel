@@ -12,6 +12,8 @@ const Steps = ({ currentStep }: { currentStep: number }) => {
       return <ProjectDetails />;
     case 3:
       return <CreateProject />;
+    default:
+      return null;
   }
 };
 
