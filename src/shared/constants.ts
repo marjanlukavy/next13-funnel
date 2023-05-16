@@ -1,4 +1,4 @@
-export const formInputs = [
+export const FORM_INPUTS = [
   {
     name: "projectName",
     label: "(It can be changed later)",
@@ -15,19 +15,19 @@ export const formInputs = [
   },
 ];
 
-export const radioOptions = [
+export const RADIO_OPTIONS = [
   { label: "Pre Product", value: "1" },
   { label: "Post Product", value: "2" },
 ];
 
-export const projectDetailsOptions = [
+export const PROJECT_DETAILS_OPTIONS = [
   { label: "Grow My Community", value: "1" },
   { label: "Activate Existing Members", value: "2" },
   { label: "Understand My Members", value: "3" },
   { label: "Other", value: "4" },
 ];
 
-export const productTableHeaders = [
+export const PRODUCT_TABLE_HEADERS = [
   "#",
   "Project Name",
   "Project URL",
@@ -38,7 +38,7 @@ export const productTableHeaders = [
   "Contact Email",
 ];
 
-export const checkboxListData = [
+export const CHECKBOX_LIST_DATA = [
   { id: "nft", label: "NFT" },
   { id: "gamefi", label: "GameFi" },
   { id: "defi", label: "DeFi" },
@@ -48,4 +48,10 @@ export const checkboxListData = [
   { id: "tools", label: "Tools" },
   { id: "ecosystem", label: "Ecosystem" },
   { id: "others", label: "Others" },
+];
+
+export const STEPS = [
+  "Start First Project",
+  "Project Details",
+  "Create Project",
 ];

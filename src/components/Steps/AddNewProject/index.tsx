@@ -1,6 +1,6 @@
 import useAddNewProject from "@/hooks/useAddNewProject";
 import useStepper from "@/hooks/useStepper";
-import { formInputs } from "@/mocks/mockData";
+import { FORM_INPUTS } from "@/shared/constants";
 import React, { useState } from "react";
 import CustomButton from "../../CustomFormElements/CustomButton";
 import CheckboxList from "../../CustomFormElements/CustomCheckbox";
@@ -34,7 +34,7 @@ const AddNewProject = () => {
       />
       <form onSubmit={handleAddProject}>
         <div className="flex flex-col gap-7">
-          {formInputs.map((input) => (
+          {FORM_INPUTS.map((input) => (
             <CustomInput
               required
               key={input.name}

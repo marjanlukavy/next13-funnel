@@ -1,5 +1,5 @@
 import useAddNewProject from "@/hooks/useAddNewProject";
-import { radioOptions } from "@/mocks/mockData";
+import { RADIO_OPTIONS } from "@/shared/constants";
 import React from "react";
 import CustomInput from "../../CustomFormElements/CustomInput";
 import Title from "../../CustomFormElements/Title";
@@ -17,7 +17,7 @@ const ProductType = () => {
     <div className="flex flex-col gap-4">
       <Title title={"Are you pre or post product launch?"} className="mt-7" />
       <RadioList
-        radioOptions={radioOptions}
+        radioOptions={RADIO_OPTIONS}
         classname="gap-6"
         radioBoxKey="productType"
       />

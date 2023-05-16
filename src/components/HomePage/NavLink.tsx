@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link"; // Import the Link component from next/link
+import Link from "next/link";
 
 const NavLink = ({ href, children }: { href: string; children: string }) => {
   return (

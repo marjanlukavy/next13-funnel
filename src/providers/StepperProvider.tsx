@@ -1,4 +1,5 @@
 "use client";
+import { STEPS } from "@/shared/constants";
 import React, {
   createContext,
   Dispatch,
@@ -27,13 +28,12 @@ const StepperContext = createContext<StepperContextType>({
 });
 
 const StepperProvider = ({ children }: { children: React.ReactNode }) => {
-  const steps = ["Start First Project", "Project Details", "Create Project"];
   const [currentStep, setCurrentStep] = useState(1);
   const [complete, setComplete] = useState(false);
 
   const handleNextStep = () => {
     setCurrentStep((prev) => prev + 1);
-    if (currentStep === steps.length - 1) {
+    if (currentStep === STEPS.length - 1) {
       setComplete(true);
     }
   };
@@ -50,7 +50,7 @@ const StepperProvider = ({ children }: { children: React.ReactNode }) => {
     setCurrentStep,
     complete,
     setComplete,
-    steps,
+    steps: STEPS,
     handleNextStep,
     handlePreviousStep,
   };

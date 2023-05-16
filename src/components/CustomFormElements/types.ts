@@ -54,3 +54,7 @@ export interface TitleProps {
   title: string;
   className?: string;
 }
+
+export enum ProjectKeys {
+  WorkersNumber = "workersNumber",
+}

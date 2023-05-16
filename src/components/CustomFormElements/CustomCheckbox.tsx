@@ -1,7 +1,7 @@
 "use client";
 
 import useAddNewProject from "@/hooks/useAddNewProject";
-import { checkboxListData } from "@/mocks/mockData";
+import { CHECKBOX_LIST_DATA } from "@/shared/constants";
 import React from "react";
 import Checkbox from "./Checkbox";
 import CustomLabel from "./CustomLabel";
@@ -18,7 +18,6 @@ const CheckboxList = ({
     const newSelectedCheckboxes = isChecked
       ? [...projectData.projectCategory, id]
       : projectData.projectCategory.filter((checkbox) => checkbox !== id);
-    console.log(newSelectedCheckboxes);
 
     updateProjectData("projectCategory", newSelectedCheckboxes);
   };
@@ -31,7 +30,7 @@ const CheckboxList = ({
         errorMessage={errorMessage}
       />
       <div className={`flex gap-3 flex-wrap`}>
-        {checkboxListData.map(({ id, label }) => (
+        {CHECKBOX_LIST_DATA.map(({ id, label }) => (
           <Checkbox
             key={id}
             id={id}

@@ -1,5 +1,5 @@
 import useStepper from "@/hooks/useStepper";
-import { projectDetailsOptions } from "@/mocks/mockData";
+import { PROJECT_DETAILS_OPTIONS } from "@/shared/constants";
 import React from "react";
 import CustomTitle from "../../CustomFormElements/SectionTitle";
 import NavigationButtons from "../../NavigationButtons";
@@ -17,7 +17,7 @@ const ProjectDetails = () => {
       <form onSubmit={handleNextStep}>
         <RadioList
           radioBoxKey="mainGoal"
-          radioOptions={projectDetailsOptions}
+          radioOptions={PROJECT_DETAILS_OPTIONS}
         />
         <NavigationButtons onPrevious={handlePreviousStep} />
       </form>

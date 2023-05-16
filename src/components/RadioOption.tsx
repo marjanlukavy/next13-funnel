@@ -7,7 +7,7 @@ const RadioOption = ({ checked, label, onChange }: RadioOptionProps) => {
       <input
         type="radio"
         name="option"
-        value={label} // Use label as the value
+        value={label}
         checked={checked}
         onChange={onChange}
         className="bg-[#101313] border border-inputDark checked:border-inputDark text-transparent w-6 h-6 focus:ring-0"

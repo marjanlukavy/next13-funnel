@@ -5,3 +5,7 @@ export type StepProps = {
   isComplete: boolean;
   isLastStep: boolean;
 };
+
+export enum StorageEnum {
+  Projects = "projects",
+}

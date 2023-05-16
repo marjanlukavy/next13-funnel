@@ -11,18 +11,12 @@ const Checkbox = ({ label, id, handleCheckboxChange }: CheckboxProps) => {
 
   const isChecked = projectData.projectCategory.includes(id);
 
-  const labelStyle = {
-    padding: "6px 12px",
-    background: isChecked
-      ? "rgba(33, 122, 255, 0.1)"
-      : "rgba(250, 250, 250, 0.1)",
-    borderRadius: "16px",
-    color: "#FAFAFA",
-    cursor: "pointer",
-  };
-
   return (
-    <label style={labelStyle}>
+    <label
+      className={`px-3 py-1 rounded-full
+      ${isChecked ? "bg-lightBlue" : "bg-whiteSmoke"}
+   text-white cursor-pointer`}
+    >
       <HiddenCheckbox isChecked={isChecked} onChange={handleChange} />
       {label}
     </label>

@@ -1,4 +1,5 @@
 import useAddNewProject from "@/hooks/useAddNewProject";
+import { ProjectKeys } from "./types";
 
 const NumberInput = () => {
   const { projectData, updateProjectData } = useAddNewProject();
@@ -11,18 +12,18 @@ const NumberInput = () => {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = Math.max(parseInt(event.target.value), 0);
-    updateProjectData("workersNumber", newValue);
+    updateProjectData(ProjectKeys.WorkersNumber, newValue);
   };
 
   const handleIncrement = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    updateProjectData("workersNumber", projectData.workersNumber + 1);
+    updateProjectData(ProjectKeys.WorkersNumber, projectData.workersNumber + 1);
   };
 
   const handleDecrement = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     updateProjectData(
-      "workersNumber",
+      ProjectKeys.WorkersNumber,
       Math.max(projectData.workersNumber - 1, 0)
     );
   };

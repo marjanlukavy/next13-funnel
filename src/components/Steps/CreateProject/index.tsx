@@ -6,6 +6,7 @@ import NavigationButtons from "../../NavigationButtons";
 import useStepper from "@/hooks/useStepper";
 import { useRouter } from "next/navigation";
 import useAddNewProject from "@/hooks/useAddNewProject";
+import { StorageEnum } from "../types";
 
 const CreateProject = () => {
   const router = useRouter();
@@ -15,13 +16,13 @@ const CreateProject = () => {
 
   const handleCreateProject = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const existingDataString = sessionStorage.getItem("projects");
+    const existingDataString = sessionStorage.getItem(StorageEnum.Projects);
     const existingData = existingDataString
       ? JSON.parse(existingDataString)
       : [];
     const combinedData = [...existingData, projectData];
 
-    sessionStorage.setItem("projects", JSON.stringify(combinedData));
+    sessionStorage.setItem(StorageEnum.Projects, JSON.stringify(combinedData));
     setIsSuccess(true);
 
     setTimeout(() => {
