@@ -24,7 +24,8 @@ const ProductType = () => {
       <Title title={"Contact Email"} />
       <CustomInput
         required
-        type="text"
+        pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+        type="email"
         value={projectData.contactEmail}
         placeholder="awesomenft@gmail.com"
         onChange={handleInputChange}
